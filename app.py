@@ -1,9 +1,8 @@
-from re import DEBUG
 from flask import Flask, render_template
 
-app = Flask(__name__)  #Flask object
+app = Flask(__name__)  # Flask object
 
-@app.route("/")  #when a certain url is requested what should be returned.
+@app.route("/")  # when a certain url is requested what should be returned.
 def hello_world():
   return render_template('home.html')
 
