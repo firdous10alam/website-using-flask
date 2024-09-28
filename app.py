@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, jsonify
 
 app = Flask(__name__)  # Flask object
 
@@ -29,6 +29,12 @@ def hello_world():
    return render_template('home.html',
                           recipies=RECIPE,
                           company_name='MasterChef')
+
+
+
+@app.route("/list")
+def list_item():
+    return jsonify(RECIPE)
 
 
 if __name__ == "__main__":
