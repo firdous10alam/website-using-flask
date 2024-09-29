@@ -1,2 +1,2 @@
 # website-using-flask
-A carrier website for beginners
+A Cooking website for Chefs
