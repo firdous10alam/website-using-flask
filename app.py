@@ -26,16 +26,15 @@ RECIPE = [{
 
 @app.route("/")  # when a certain url is requested what should be returned.
 def hello_world():
-   return render_template('home.html',
-                          recipies=RECIPE,
-                          company_name='MasterChef')
+    return render_template('home.html',
+                           recipies=RECIPE,
+                           company_name='MasterChef')
 
 
-
-@app.route("/list")
+@app.route("/api/list")
 def list_item():
     return jsonify(RECIPE)
 
 
 if __name__ == "__main__":
-   app.run(host="0.0.0.0", debug=True)
+    app.run(host="0.0.0.0", debug=True)
