@@ -12,18 +12,17 @@
       width: 100%;
       height: 300px;
       object-fit: cover;
+      padding-bottom: 5px;
     }
   </style>
 </head>
 
 <body>
   {% include 'nav.html' %}
+  <img class="img-fluid" id="banner" src="/static/banner.jpg">
   <div class="container">
     <h1 class="text-center mt-2 mb-4">{{company_name}} Cooking Website</h1>
-    <img class="img-fluid" id="banner"
-      src="/static/banner.jpg">
 
-    <h2 class="text-center mt-2 mb-4">About MasterChef</h2>
     <p class="lead">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
       industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled
       it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic
@@ -31,7 +30,7 @@
       containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including
       versions of Lorem Ipsum.</p>
 
-    <h2 class="text-center mt-2 mb-4">Instruction</h2>
+    <h2 class="text-center mt-2 mb-4">Recipies</h2>
 
     <div>
       {% for recipe in recipies %}
@@ -41,9 +40,7 @@
 
     <div class="text-center">
       <button class="btn btn-primary btn-lg">Contact Us</button>
-      
     </div>
-
   </div>
   {% include 'footer.html' %}
 </body>
